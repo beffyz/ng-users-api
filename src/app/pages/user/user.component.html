@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 center-md">
+      <div class="user-image">
+        <img width="400" src="./assets/images/person.jpg" alt="person" />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="user-details" *ngIf="user$ | async as user">
+        <h2>{{ user.name }}</h2>
+        <p>{{user.email}}</p>
+        <p>{{user.phone}}</p>
+        <p>{{user.company.name}}</p>
+        <p>{{user.company.catchPhrase}}</p>
+      </div>
+    </div>
+  </div>
+</div>

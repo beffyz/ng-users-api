@@ -1,1 +1,15 @@
-<p>users works!</p>
+<div class="center-md" *ngIf="loading$ | async">
+  <p>Loading...</p>
+</div>
+
+<div class="container">
+  <div class="users" *ngIf="users$ | async as users">
+    <div class="users__card" *ngFor="let user of users">
+      <img width="100" src="./assets/images/person.jpg" alt="person" />
+      <p>{{ user.username }}</p>
+      <button class="users__card--btn" [routerLink]="['/users', user.id]">
+        View profile
+      </button>
+    </div>
+  </div>
+</div>

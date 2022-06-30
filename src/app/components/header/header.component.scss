@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  text-align: center;
+  background-color: #0d0d41;
+  min-height: 250px;
+}
+
+.header__title {
+  padding-top: 100px;
+  font-size: 36px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.header__nav {
+padding-top: 65px;
+}
+
+.header__nav--btn {
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    color: #94c2d5;
+    cursor: pointer;
+  }
+}
+
+.header__search {
+  max-height: 25px;
+}
